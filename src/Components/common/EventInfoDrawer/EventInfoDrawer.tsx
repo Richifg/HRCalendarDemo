@@ -15,13 +15,13 @@ import { EventDisplayInfo } from '../../../interfaces';
 const { Title, Text, Link } = Typography;
 
 
-interface EventProps {
+interface EventInfoDrawerProps {
     isOpen?: boolean;
     eventInfo?: EventDisplayInfo;
     onClose?(): void;
 }
 
-const EventInfoDrawer = ({ isOpen=false, eventInfo, onClose }: EventProps): React.ReactElement =>  {
+const EventInfoDrawer = ({ isOpen=false, eventInfo, onClose }: EventInfoDrawerProps): React.ReactElement =>  {
 
     return (
         <Drawer open={isOpen} onClose={onClose} title="Event information">
@@ -38,7 +38,6 @@ const EventInfoDrawer = ({ isOpen=false, eventInfo, onClose }: EventProps): Reac
                                     {eventInfo.startTime && <Col span={12}><TimePicker value={eventInfo.startTime} /></Col>}
                                 </Row> 
                             </>
-
                         )}
                         {eventInfo.endDate && (
                             <>

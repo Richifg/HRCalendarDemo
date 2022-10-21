@@ -9,6 +9,7 @@ export interface Event {
     className?: string;
     allDay?: boolean;
     url?: string;
+    id?: string;
 }
 
 export interface EventDisplayInfo {

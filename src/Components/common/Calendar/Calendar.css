@@ -5,6 +5,7 @@
     --red-dark: rgb(177, 50, 34);
     --purple: rgb(131, 15, 131);
     --purple-dark: rgb(114, 14, 114);
+    --orange: rgb(255, 123, 0);
 }
 
 .fc a {
@@ -36,6 +37,7 @@
     border-color: var(--red-dark);
 }
 
+
 /* DOT EVENTS */
 .fc-daygrid-dot-event.specific-event .fc-daygrid-event-dot {
     border-color: var(--blue);
@@ -43,6 +45,12 @@
 .fc-daygrid-dot-event.specific-event .fc-daygrid-event-dot,
 .fc-daygrid-dot-event.one-hour-event .fc-daygrid-event-dot {
     border-color: var(--red);
+}
+.fc-daygrid-dot-event.static-event {
+    border: 2px solid var(--orange);
+}
+.fc-daygrid-dot-event.static-event .fc-daygrid-event-dot {
+    border-color: var(--orange);
 }
 
 @media screen and (max-width: 600px) {
