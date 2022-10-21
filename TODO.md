@@ -5,9 +5,9 @@ TODO
 * ~~render events on calendar~~
 * ~~install antD and add drawer with event info~~
 * ~~add modal with halloween event~~
-* replace calendar buttons with antd buttons
 * add header with "app name" and logo
-* add mobile view variants
 * create a separate page for calendar and add landing page with a big animated logo and enter button
-* beautify
+* add mobile view variants
+* design UI theme
+* apply theme
 * document
