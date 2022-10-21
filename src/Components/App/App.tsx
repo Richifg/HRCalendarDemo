@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import Calendar from '../../components/Calendar/Calendar';
+import React from 'react';
+import Calendar from '../common/Calendar/Calendar';
 import './App.css';
 
 function App() {  

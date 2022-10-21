@@ -1,31 +1,26 @@
+import { Moment } from 'moment';
 
-export interface APIEvent {
+export type EventType = 'allDay' | 'specific' | 'oneHour';
+
+export interface Event {
     title: string;
     start: string;
     end?: string;
-}
-export type EventType = 'allDay' | 'specific' | 'oneHour';
-
-export interface Event extends APIEvent {
-    type: EventType; // used on App
-    allDay: boolean; // used by FullCalendar
-    className: string; // used by FullCalendar
+    className?: string;
+    allDay?: boolean;
+    url?: string;
 }
 
-export interface EventAllDay extends Event {
-    type: 'allDay';
-    allDay: true;
+export interface EventDisplayInfo {
+    title: string;
+    allDay: boolean,
+    repeating: boolean,
+    startDate?: Moment,
+    startTime?: Moment,
+    endDate?: Moment,
+    endTime?: Moment,
+    url?: string,
 }
-
-export interface EventSpecific extends Event {
-    type: 'specific';
-    end: string;
-}
-
-export interface EventOneHour extends Event {
-    type: 'oneHour';
-}
-
 
 /*
 [
