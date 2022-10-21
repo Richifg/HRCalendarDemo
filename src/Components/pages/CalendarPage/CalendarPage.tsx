@@ -10,7 +10,7 @@ const CalendarPage = (): React.ReactElement => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     return (
-        <div>
+        <>
             <Calendar 
                 onEventClick={eventArg => {
                     setSelectedEventInfo(getEventDisplayInfo(eventArg.event))
@@ -29,7 +29,7 @@ const CalendarPage = (): React.ReactElement => {
                 onClose={() => setIsModalOpen(false)}
                 eventInfo={selectedEventInfo}
             />
-        </div>
+        </>
     );
 }
 

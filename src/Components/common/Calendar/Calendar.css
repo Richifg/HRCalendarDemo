@@ -8,12 +8,21 @@
     --orange: rgb(255, 123, 0);
 }
 
+.fc {
+    height: 100%;
+}
+
 .fc a {
     color: black;
 }
 
 .fc-daygrid-event {
     cursor: pointer;
+}
+
+.fc-day-grid-container.fc-scroller {
+    height: auto!important;
+    overflow-y: auto;
 }
 
 /* BLOCK EVENTS */
