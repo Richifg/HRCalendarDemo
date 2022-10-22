@@ -5,7 +5,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 import CalendarAPI from '../../../services/CalendarAPI';
 
 import initEvents from './initEvents';
-import './Calendar.css';
+import './Calendar.scss';
 
 const eventSource: EventSourceFunc = function({ startStr, endStr }, sucessCb, failureCb) {
     CalendarAPI.getEvents(startStr, endStr).then(({ success, data, error }) => {
@@ -25,6 +25,7 @@ const Calendar = ({ onEventClick }: CalendarProps): React.ReactElement => (
         events={eventSource}
         initialEvents={initEvents}
         eventClick={onEventClick}
+        headerToolbar={{ start: 'today', center: 'title', end: 'prev next' }}
     />
 ); 
 

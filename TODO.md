@@ -17,7 +17,8 @@ design (~2hrs)
 
 styling and animations
 * ~~style landing~~
-* style navbar
+* ~~style navbar~~
+* ~~style calendar~~
 * style drawer
 * style halloween modal
 * add mobile view variants
