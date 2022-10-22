@@ -24,7 +24,13 @@ interface EventInfoDrawerProps {
 const EventInfoDrawer = ({ isOpen=false, eventInfo, onClose }: EventInfoDrawerProps): React.ReactElement =>  {
 
     return (
-        <Drawer open={isOpen} onClose={onClose} title="Event information">
+        <Drawer 
+            open={isOpen} 
+            onClose={onClose} 
+            title="Event information"
+            getContainer={false}
+            style={{ position: 'absolute' }}
+        >
             {eventInfo && (
                     <>
                         <Title level={1}>{eventInfo.title}</Title>

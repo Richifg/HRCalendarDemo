@@ -22,7 +22,7 @@ const CalendarPage = (): React.ReactElement => {
             <EventInfoDrawer 
                 isOpen={isDrawerOpen}
                 onClose={() => setIsDrawerOpen(false)}
-                eventInfo={selectedEventInfo} 
+                eventInfo={selectedEventInfo}
             />
             <HalloweenModal
                 isOpen={isModalOpen}
