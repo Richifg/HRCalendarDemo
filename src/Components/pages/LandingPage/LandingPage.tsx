@@ -1,6 +1,10 @@
 import React, { ReactElement } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Button } from 'antd';
+import { Button, Typography } from 'antd';
+
+import './LandingPage.scss';
+
+const { Title } = Typography;
 
 const LandingPage = (): ReactElement => {
     const navigate = useNavigate();
@@ -10,8 +14,8 @@ const LandingPage = (): ReactElement => {
     }
 
     return ( 
-        <div>
-            <h1>Landing Page</h1>
+        <div className="landing-page">
+            <h1>HR Web</h1>
             <Button onClick={onEnter}>Enter</Button>
         </div>
     );

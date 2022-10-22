@@ -12,12 +12,12 @@ extra functionality (DONE ~2.5hrs)
 * ~~create separate pages and add router~~
 * ~~add nav bar with app name, logo and "logout"~~
 
-design 
+design (~2hrs)
 * design UI theme
 
 styling and animations
-* apply theme
-* add animations
+* ~~style landing~~
+* style navbar
 * add mobile view variants
 
 documentation
