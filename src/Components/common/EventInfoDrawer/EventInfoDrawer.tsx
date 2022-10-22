@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { EventApi } from '@fullcalendar/react';
 import { 
     Drawer,
     DatePicker,
@@ -7,12 +6,15 @@ import {
     Typography,
     Checkbox,
     Row,
-    Col,
+    Button,
+    Input,
 } from 'antd';
 
 import { EventDisplayInfo } from '../../../interfaces';
+import './EventInfoDrawer.scss';
 
 const { Title, Text, Link } = Typography;
+const { TextArea } = Input;
 
 
 interface EventInfoDrawerProps {
@@ -23,6 +25,10 @@ interface EventInfoDrawerProps {
 
 const EventInfoDrawer = ({ isOpen=false, eventInfo, onClose }: EventInfoDrawerProps): React.ReactElement =>  {
 
+    const alert = () => {
+        window.alert('Event edditing not available');
+    }
+
     return (
         <Drawer 
             open={isOpen} 
@@ -30,44 +36,48 @@ const EventInfoDrawer = ({ isOpen=false, eventInfo, onClose }: EventInfoDrawerPr
             title="Event information"
             getContainer={false}
             style={{ position: 'absolute' }}
+            className="event-info-drawer"
         >
             {eventInfo && (
                     <>
                         <Title level={1}>{eventInfo.title}</Title>
                         {eventInfo.startDate && (
                             <>
+                                <Text className="event-property">Start Date</Text>
                                 <Row>
-                                    <Col span={24}><Text>Start Date</Text></Col>
-                                </Row>
-                                <Row>
-                                    <Col span={12}><DatePicker value={eventInfo.startDate} /></Col>
-                                    {eventInfo.startTime && <Col span={12}><TimePicker value={eventInfo.startTime} /></Col>}
+                                    <DatePicker value={eventInfo.startDate} onChange={alert}/>
+                                    {eventInfo.startTime && <TimePicker value={eventInfo.startTime} onChange={alert} />}
                                 </Row> 
                             </>
                         )}
                         {eventInfo.endDate && (
                             <>
+                                
+                                <Text className="event-property">End Date</Text>
                                 <Row>
-                                    <Col span={24}><Text>End Date</Text></Col>
-                                </Row>
-                                <Row>
-                                    <Col span={12}><DatePicker value={eventInfo.endDate} /></Col>
-                                    {eventInfo.endTime && <Col span={12}><TimePicker value={eventInfo.endTime} /></Col>}
+                                    <DatePicker value={eventInfo.endDate} onChange={alert} />
+                                    {eventInfo.endTime && <TimePicker value={eventInfo.endTime} onChange={alert} />}
                                 </Row> 
                             </>
                         )}
                         <Row>
-                            <Checkbox checked={eventInfo.allDay}>All Day</Checkbox>
+                            <Checkbox className="event-property" checked={eventInfo.allDay} onChange={alert}>All Day</Checkbox>
                         </Row>
                         <Row>
-                            <Checkbox checked={eventInfo.repeating}>Repeating</Checkbox>
+                            <Checkbox className="event-property" checked={eventInfo.repeating} onChange={alert}>Repeating</Checkbox>
+                        </Row>                
+                        <Row>
+                            <Text className="event-property">URL &nbsp;</Text>
+                            {eventInfo.url === ''
+                                ? <Text className="none">none</Text> 
+                                : <Link href={eventInfo.url} target="_blank">{eventInfo.url}</Link>
+                            }
                         </Row>
-                        {eventInfo.url && (
-                            <Row>
-                                <Col span={3}><Text>URL:</Text></Col>
-                                <Col span={21}><Link href={eventInfo.url} target="_blank">{eventInfo.url}</Link></Col>
-                            </Row>
-                        )}
+                        <Row>
+                            <Text className="event-property">Description</Text>
+                            <TextArea rows={4} onChange={alert} />
+                        </Row>
+                        <Button onClick={alert} className="update-button">Update</Button>
                     </>
                 )
             }
