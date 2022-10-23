@@ -120,6 +120,27 @@
         left: 105%;
         animation: grab2 1.5s forwards;
     }
+    .bat {
+        width: 5%;
+        left: 50%;
+        top: 50%;
+    }
+
+    .bat-1 {
+        animation: flyRight 4s forwards;
+    }
+    .bat-2 {
+        top: 40%;
+        animation: flyRight 5s forwards;
+    }
+    .bat-3 {
+        left: 30%;
+        animation: flyLeft 3s forwards;
+    }
+    .bat-4 {
+        left: 40%;
+        animation: flyLeft 4.5s forwards;
+    }
     
     @media screen and (max-width: 700px) {
         .hand {
@@ -130,6 +151,9 @@
         }
         .tree {
             height: 40%;
+        }
+        .bat {
+            width: 10%;
         }
         
     }
@@ -166,6 +190,13 @@
         0% { transform: scaleX(-1) translateY(-3%) rotateY(20deg);}
         50% { transform: scaleX(-1) translateY(3%) rotateY(-15deg); }
         100% { transform: scaleX(-1) translateY(-3%) rotateY(20deg); }
+    }
+    @keyframes flyRight {
+        0% { transform: scaleX(-1) }
+        100% { transform: scale(0) translate(-1000%, -1000%); }
+    }
+    @keyframes flyLeft {
+        100% { transform: scale(0) translate(-1000%, -1000%); }
     }
 }
 

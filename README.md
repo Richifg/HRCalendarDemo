@@ -5,7 +5,7 @@ A calendar demo for a human resources team, where events can be easily visualize
 ## Built with
 * [ReactJS](https://reactjs.org/)
 * [FullCalendar](https://fullcalendar.io/)
-* [And Design](https://ant.design/)
+* [Ant Design](https://ant.design/)
 
 > *Developed with Node v14.20.0
 

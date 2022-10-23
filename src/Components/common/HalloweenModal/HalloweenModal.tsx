@@ -10,6 +10,7 @@ import hand from '../../../assets/hand.svg';
 import tree from '../../../assets/tree.svg';
 import pumpkin from '../../../assets/pumpkin.svg';
 import pumpkinInside from '../../../assets/pumpkinInside.svg';
+import bat from '../../../assets/bat.svg';
  
 import './HalloweenModal.scss';
 
@@ -50,6 +51,10 @@ const HalloweenModal = ({ eventInfo, isOpen, onClose }: HalloweenModalProps): Re
                     <span className="asset pumpkin-light" />
                     <img src={pumpkin} className="asset pumpkin" />
                 </span>
+                <img src={bat} className="asset bat bat-1" />
+                <img src={bat} className="asset bat bat-2" />
+                <img src={bat} className="asset bat bat-3" />
+                <img src={bat} className="asset bat bat-4" />
             </>
         )}
     </Modal>
