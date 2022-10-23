@@ -82,10 +82,21 @@ $event-orange: rgb(255, 123, 0);
 }
 
 @media screen and (max-width: 600px) {
-    $event-blue: $event-purple;
-    $event-blue-dark: $event-purple-dark;
-    $event-red: $event-purple;
-    $event-red-dark: $event-purple-dark;
+    .fc-daygrid-block-event.all-day-event,
+    .fc-daygrid-block-event.one-hour-event,
+    .fc-daygrid-block-event.specific-event {
+        background-color:  $event-purple;
+        border-color:  $event-purple;
+        &:hover {
+            background-color:  $event-purple-dark;
+            border-color:  $event-purple-dark;
+        }
+    } 
+    .fc-daygrid-dot-event.specific-event .fc-daygrid-event-dot,
+    .fc-daygrid-dot-event.specific-event .fc-daygrid-event-dot,
+    .fc-daygrid-dot-event.one-hour-event .fc-daygrid-event-dot {
+        border-color: $event-purple;
+    }
 }
 
 @media screen and (max-width: 480px) {
