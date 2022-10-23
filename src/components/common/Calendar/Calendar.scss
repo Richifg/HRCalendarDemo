@@ -1,0 +1,95 @@
+@import '../../../theme.scss';
+
+$event-blue: rgb(45, 114, 218);
+$event-blue-dark: rgb(32, 88, 170);
+$event-red: rgb(218, 64, 44);
+$event-red-dark: rgb(177, 50, 34);
+$event-purple: rgb(131, 15, 131);
+$event-purple-dark: rgb(114, 14, 114);
+$event-orange: rgb(255, 123, 0);
+
+.fc {
+    height: 100%;
+}
+
+.fc a {
+    color: black;
+    &:hover {
+        color: black;
+    }
+}
+
+.fc-toolbar-chunk {
+    display: flex;
+    .fc-button, .fc-button-primary {
+        background-color: $color-primary;
+        border: none;
+        padding: 3px 10px;
+        &:hover:not(:disabled) {
+            background-color: $color-primary-dark;
+        }
+    }
+    .fc-button:disabled {
+        cursor: not-allowed;
+    }
+}
+.fc-toolbar-title {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.fc-daygrid-event {
+    cursor: pointer;
+}
+
+.fc-day-grid-container.fc-scroller {
+    height: auto!important;
+    overflow-y: auto;
+}
+
+/* BLOCK EVENTS */
+.fc-daygrid-block-event.specific-event {
+    background-color: $event-blue;
+    border-color: $event-blue;
+    &:hover {
+        background-color: $event-blue-dark;
+        border-color: $event-blue-dark;
+    }
+} 
+.fc-daygrid-block-event.all-day-event,
+.fc-daygrid-block-event.one-hour-event {
+    background-color: $event-red;
+    border-color: $event-red;
+    &:hover {
+        background-color: $event-red-dark;
+        border-color: $event-red-dark;
+    }
+}
+
+/* DOT EVENTS */
+.fc-daygrid-dot-event.specific-event .fc-daygrid-event-dot {
+    border-color: $event-blue;
+}
+.fc-daygrid-dot-event.specific-event .fc-daygrid-event-dot,
+.fc-daygrid-dot-event.one-hour-event .fc-daygrid-event-dot {
+    border-color: $event-red;
+}
+.fc-daygrid-dot-event.static-event {
+    border: 2px solid $event-orange;
+}
+.fc-daygrid-dot-event.static-event .fc-daygrid-event-dot {
+    border-color: $event-orange;
+}
+
+@media screen and (max-width: 600px) {
+    $event-blue: $event-purple;
+    $event-blue-dark: $event-purple-dark;
+    $event-red: $event-purple;
+    $event-red-dark: $event-purple-dark;
+}
+
+@media screen and (max-width: 480px) {
+    .fc .fc-toolbar-title { 
+        font-size: 1.4em;
+    }
+}
