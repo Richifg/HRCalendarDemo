@@ -20,6 +20,7 @@ interface CalendarProps {
 
 const Calendar = ({ onEventClick }: CalendarProps): React.ReactElement => (
     <FullCalendar
+        timeZone="UTC"
         plugins={[ dayGridPlugin ]}
         initialView="dayGridMonth"
         events={eventSource}

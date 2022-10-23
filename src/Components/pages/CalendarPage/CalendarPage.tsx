@@ -13,6 +13,7 @@ const CalendarPage = (): React.ReactElement => {
         <>
             <Calendar 
                 onEventClick={eventArg => {
+                    console.log(eventArg.event, eventArg.event.start, eventArg.event.startStr);
                     setSelectedEventInfo(getEventDisplayInfo(eventArg.event));
                     if (eventArg.event.id === 'halloween') setIsModalOpen(true);
                     else setIsDrawerOpen(true);

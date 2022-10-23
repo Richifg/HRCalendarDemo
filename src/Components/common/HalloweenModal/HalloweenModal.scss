@@ -105,7 +105,7 @@
         filter: blur(10px);
         border: 15px solid yellow;
         transform: translate(-50%) rotate(90deg);
-        animation: light 3s infinite;
+        animation: light .7s infinite;
     }
     .hand {
         width: 10%;
@@ -144,10 +144,10 @@
         100% { transform: scale(1) translateY(0) rotateX(0); }
     }
     @keyframes light {
-        0% { transform: translate(-50%) scale(0.5) rotate(90deg); }
-        15% { transform: translate(-50%) scale(1) rotate(80deg); }
-        85% { transform: translate(-50%) scale(1) rotate(100deg); }
-        100% { transform: translate(-50%) scale(0.5)rotate(90deg); }
+        0% { transform: translate(-50%) scale(1) rotate(90deg); }
+        40% { transform: translate(-50%) scale(0.95) rotate(80deg); }
+        80% { transform: translate(-50%) scale(0.95) rotate(100deg); }
+        100% { transform: translate(-50%) scale(1)rotate(90deg); }
     }
     @keyframes grab {
         0% { transform: translateX(-20%) skew(10deg, -20deg) rotateY(-70deg) scale(0.7); }

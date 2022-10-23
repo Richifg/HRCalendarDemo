@@ -1,4 +1,5 @@
 import React from 'react';
+import moment from 'moment';
 import { 
     Drawer,
     DatePicker,
@@ -46,8 +47,8 @@ const EventInfoDrawer = ({ isOpen=false, eventInfo, onClose }: EventInfoDrawerPr
                             <>
                                 <Text className="event-property">Start Date</Text>
                                 <Row>
-                                    <DatePicker value={eventInfo.startDate} onChange={alert}/>
-                                    {eventInfo.startTime && <TimePicker value={eventInfo.startTime} onChange={alert} />}
+                                    <DatePicker value={moment(eventInfo.startDate)} onChange={alert}/>
+                                    {eventInfo.startTime && <TimePicker value={moment(eventInfo.startTime, 'HH:mm:ss')} onChange={alert} />}
                                 </Row> 
                             </>
                         )}
@@ -56,8 +57,8 @@ const EventInfoDrawer = ({ isOpen=false, eventInfo, onClose }: EventInfoDrawerPr
                                 
                                 <Text className="event-property">End Date</Text>
                                 <Row>
-                                    <DatePicker value={eventInfo.endDate} onChange={alert} />
-                                    {eventInfo.endTime && <TimePicker value={eventInfo.endTime} onChange={alert} />}
+                                    <DatePicker value={moment(eventInfo.endDate)} onChange={alert} />
+                                    {eventInfo.endTime && <TimePicker value={moment(eventInfo.endTime, 'HH:mm:ss')} onChange={alert} />}
                                 </Row> 
                             </>
                         )}

@@ -35,7 +35,7 @@ const HalloweenModal = ({ eventInfo, isOpen, onClose }: HalloweenModalProps): Re
                 <span className="text-content">
                     <Title className="modal-title">{eventInfo.title}</Title>
                     <Text className="modal-subtitle">When?</Text>
-                    <Text className="modal-text">{`${moment(eventInfo.startDate).format('MMMM Do')}, ${moment(eventInfo.startTime).format('h:mm')}-${moment(eventInfo.endTime).format('h:mm')}`}</Text>
+                    <Text className="modal-text">{`${moment(eventInfo.startDate).format('MMMM Do')}, ${moment(eventInfo.startTime,'HH:mm:ss').format('h:mm', )}-${moment(eventInfo.endTime, 'HH:mm:ss').format('h:mm')}`}</Text>
                     <Text className="modal-subtitle">Where?</Text>
                     <Text className="modal-text">Hexagon office</Text>
                 </span>

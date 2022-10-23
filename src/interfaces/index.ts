@@ -16,9 +16,9 @@ export interface EventDisplayInfo {
     title: string;
     allDay: boolean,
     repeating: boolean,
-    startDate?: Moment,
-    startTime?: Moment,
-    endDate?: Moment,
-    endTime?: Moment,
+    startDate?: string,
+    startTime?: string,
+    endDate?: string,
+    endTime?: string,
     url?: string,
 }
