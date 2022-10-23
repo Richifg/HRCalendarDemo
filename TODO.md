@@ -23,11 +23,11 @@ styling (~5hrs)
 * ~~add mobile view variants~~
 
 
-halloween modal animation
+halloween modal animation (DONE ~4hrs)
 * ~~find assets~~
 * ~~clean assets~~
 * ~~animate~~
 
-documentation
-* write README.md
-* comment and clean up
+documentation (DONE ~1hr)
+* ~~write README.md~~
+* ~~comment and clean up~~
