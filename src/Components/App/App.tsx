@@ -2,7 +2,6 @@ import React from 'react';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
 import { CalendarPage, LandingPage, UnavailablePage, PageLayout } from '../pages';
-import './App.css';
 
 function App() {  
   return (
