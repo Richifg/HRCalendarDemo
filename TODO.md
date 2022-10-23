@@ -12,15 +12,15 @@ extra functionality (DONE ~2.5hrs)
 * ~~create separate pages and add router~~
 * ~~add nav bar with app name, logo and "logout"~~
 
-design (~2hrs)
-* design UI theme
+design (DONE ~2hrs)
+* ~~design UI theme~~
 
-styling (~4hrs)
+styling (~5hrs)
 * ~~style landing~~
 * ~~style navbar~~
 * ~~style calendar~~
 * ~~style drawer~~
-* add mobile view variants
+* ~~add mobile view variants~~
 
 
 halloween modal animation

@@ -3,6 +3,9 @@ import { Layout, Menu, Typography, Button  } from 'antd';
 import { CalendarFilled, PlusSquareFilled, LogoutOutlined, SettingFilled } from '@ant-design/icons';
 import { Outlet, useNavigate } from 'react-router-dom';
 
+import hexBlueBig from '../../../assets/hexBlueBig.svg';
+import hexOrange from '../../../assets/hexOrange.svg';
+
 import './PageLayout.scss';
 
 const { Header, Content, Footer, Sider } = Layout;
@@ -29,7 +32,7 @@ const PageLayout = (): React.ReactElement => {
             <Button onClick={() => navigate('/')}><LogoutOutlined/></Button>
         </Header>
         <Layout>
-            <Sider width={150}>
+            <Sider width={200}>
                 <Menu
                     mode="inline"
                     items={routes}
@@ -44,6 +47,8 @@ const PageLayout = (): React.ReactElement => {
             </Layout>
         </Layout>
         <Footer/>
+        <img src={hexBlueBig} className="hex hex-blue-big"/>
+        <img src={hexOrange} className="hex hex-orange"/>
     </Layout>
   );
 };

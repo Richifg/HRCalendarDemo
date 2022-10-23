@@ -24,7 +24,7 @@ $event-orange: rgb(255, 123, 0);
     .fc-button, .fc-button-primary {
         background-color: $color-primary;
         border: none;
-        padding: 8px 10px;
+        padding: 3px 10px;
         &:hover:not(:disabled) {
             background-color: $color-primary-dark;
         }
@@ -32,6 +32,10 @@ $event-orange: rgb(255, 123, 0);
     .fc-button:disabled {
         cursor: not-allowed;
     }
+}
+.fc-toolbar-title {
+    text-decoration: underline;
+    text-align: center;
 }
 
 .fc-daygrid-event {
@@ -78,10 +82,14 @@ $event-orange: rgb(255, 123, 0);
 }
 
 @media screen and (max-width: 600px) {
-    :root {
-        --blue: $event-purple;
-        --blue-dark: $event-purple-dark;
-        --red: $event-purple;
-        --red-dark: $event-purple-dark;
+    $event-blue: $event-purple;
+    $event-blue-dark: $event-purple-dark;
+    $event-red: $event-purple;
+    $event-red-dark: $event-purple-dark;
+}
+
+@media screen and (max-width: 480px) {
+    .fc .fc-toolbar-title { 
+        font-size: 1.4em;
     }
 }

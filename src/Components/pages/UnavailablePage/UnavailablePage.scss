@@ -1,0 +1,15 @@
+@import '../../../theme.scss';
+
+.unavailable-page {
+
+    .title {
+        font-size: 25px;
+        color: $color-primary;
+        text-decoration: underline;
+        margin-bottom: auto;
+    }
+    img {
+        max-height: 300px;
+        margin-top: 80px;
+    }
+}

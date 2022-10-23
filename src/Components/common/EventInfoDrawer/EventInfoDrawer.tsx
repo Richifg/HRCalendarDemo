@@ -27,7 +27,7 @@ interface EventInfoDrawerProps {
 const EventInfoDrawer = ({ isOpen=false, eventInfo, onClose }: EventInfoDrawerProps): React.ReactElement =>  {
 
     const alert = () => {
-        window.alert('Event edditing not available');
+        window.alert('Event editing is not available on this demo');
     }
 
     return (
