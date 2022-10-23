@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { 
     Drawer,
     DatePicker,
@@ -11,6 +11,7 @@ import {
 } from 'antd';
 
 import { EventDisplayInfo } from '../../../interfaces';
+
 import './EventInfoDrawer.scss';
 
 const { Title, Text, Link } = Typography;

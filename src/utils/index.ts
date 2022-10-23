@@ -13,6 +13,7 @@ export function getClassnamedEvents(events: Event[]): Event[] {
     });
 }
 
+
 export function getEventDisplayInfo(event: EventApi): EventDisplayInfo {
     const displayInfo: EventDisplayInfo = { 
         title: event.title,

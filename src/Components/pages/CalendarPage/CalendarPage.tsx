@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { getEventDisplayInfo } from '../../../utils';
-import { EventDisplayInfo } from '../../../interfaces';
 import { Calendar, HalloweenModal, EventInfoDrawer } from '../../common';
+import { EventDisplayInfo } from '../../../interfaces';
+import { getEventDisplayInfo } from '../../../utils';
 
 
 const CalendarPage = (): React.ReactElement => {
@@ -13,7 +13,7 @@ const CalendarPage = (): React.ReactElement => {
         <>
             <Calendar 
                 onEventClick={eventArg => {
-                    setSelectedEventInfo(getEventDisplayInfo(eventArg.event))
+                    setSelectedEventInfo(getEventDisplayInfo(eventArg.event));
                     if (eventArg.event.id === 'halloween') setIsModalOpen(true);
                     else setIsDrawerOpen(true);
                     eventArg.jsEvent.preventDefault(); // to stop events with url from redirecting

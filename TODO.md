@@ -15,13 +15,18 @@ extra functionality (DONE ~2.5hrs)
 design (~2hrs)
 * design UI theme
 
-styling and animations
+styling (~4hrs)
 * ~~style landing~~
 * ~~style navbar~~
 * ~~style calendar~~
-* style drawer
-* style halloween modal
+* ~~style drawer~~
 * add mobile view variants
+
+
+halloween modal animation
+* ~~find assets~~
+* ~~clean assets~~
+* ~~animate~~
 
 documentation
 * write README.md

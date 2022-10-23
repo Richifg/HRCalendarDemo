@@ -1,0 +1,171 @@
+@import '../../../theme.scss';
+
+.ant-modal-mask {
+    background-color: rgba(0, 0, 0, 0.75) !important;
+} 
+
+.halloween-modal {
+    width: 90% !important;
+    max-width: 800px !important;
+    padding: 0;
+    
+    .ant-btn, 
+    .ant-modal-close-x, 
+    .ant-modal-footer{
+        display: none;
+    }
+    
+    .ant-modal-body {
+        padding: 0;
+        background-color: $color-background;
+        background-image: radial-gradient(circle at 50% 25%, rgba(232, 100, 48, 0.75), #2e1641 69%);
+        min-height: 500px;
+
+    }
+    .text-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform: translateY(20%);
+        opacity: 0;
+        animation: slideUp 0.75s forwards;
+    }
+    .modal-title {
+        color: $color-primary;
+        font-family: 'Creepster', cursive;
+        text-shadow: 1px 1px black;
+        font-size: 80px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .modal-subtitle {
+        color: $color-primary;
+        font-family: 'Creepster', cursive;
+        font-size: 30px;
+        align-self: left;
+    }
+    .modal-text {
+        color: white;
+        text-shadow: 1px 1px black;
+        font-size: 20px;
+        justify-self: right;
+    }
+
+
+    .asset {
+        position: absolute;
+    }
+
+    .foreground {
+        bottom: 0;
+        width: 100%;
+    }
+    .background {
+        bottom: 0;
+        width: 100%;
+    }
+    .tree {
+        height: 50%;
+        bottom: 30%;
+        left: 0;
+    }
+    .tree-1 {
+        transform-origin: left;
+        animation: tree 15s infinite;
+    }
+    .tree-2 {
+        transform-origin: left;
+        left: 100%;
+        transform: scaleX(-1);
+        animation: tree2 15s -3s infinite;
+    }
+    .pumpkin-container {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        transform-origin: top;
+        animation: pumpkin 1.5s forwards;
+    }
+    .pumpkin, .pumpkin-inside {
+        width: 20%;
+        height: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .pumpkin-light {
+        left: 50%;
+        width: 10%;
+        background-color: $color-primary;
+        border-radius: 50px;
+        filter: blur(10px);
+        border: 15px solid yellow;
+        transform: translate(-50%) rotate(90deg);
+        animation: light 3s infinite;
+    }
+    .hand {
+        width: 10%;
+        top: 10%;
+        left: -5%;
+    }
+    .hand-1 {
+        animation: grab 1.5s;
+        // transform: skew(0deg, -40deg) rotateY(-70deg) scale(0.5);
+    }
+    .hand-2 {
+        left: 105%;
+        animation: grab2 1.5s forwards;
+    }
+    
+    @media screen and (max-width: 700px) {
+        .hand {
+            width: 15%;
+        }
+        .pumpkin, .pumpkin-inside {
+            width: 25%;
+        }
+        .tree {
+            height: 40%;
+        }
+        
+    }
+    @keyframes slideUp {
+        100% {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    @keyframes pumpkin {
+        0% { transform: scale(0.8) translateY(-2%) rotateX(-48deg); }
+        100% { transform: scale(1) translateY(0) rotateX(0); }
+    }
+    @keyframes light {
+        0% { transform: translate(-50%) scale(0.5) rotate(90deg); }
+        15% { transform: translate(-50%) scale(1) rotate(80deg); }
+        85% { transform: translate(-50%) scale(1) rotate(100deg); }
+        100% { transform: translate(-50%) scale(0.5)rotate(90deg); }
+    }
+    @keyframes grab {
+        0% { transform: translateX(-20%) skew(10deg, -20deg) rotateY(-70deg) scale(0.7); }
+        100% { transform: translateX(0) skew(0) rotateY(0) scale(1); }
+    }
+    @keyframes grab2 {
+        0% { transform: translateX(-80%) skew(-10deg, -20deg) rotateY(-70deg) scale(-0.8, 0.8); }
+        100% { transform: translateX(-100%) skew(0) rotateY(0) scale(-1, 1); }
+    }
+    @keyframes tree {
+        0% { transform: translateY(3%) rotateY(30deg) ;}
+        50% { transform: translateY(-3%) rotateY(-30deg); }
+        100% { transform: translateY(3%) rotateY(30deg); }
+    }
+    @keyframes tree2 {
+        0% { transform: scaleX(-1) translateY(-3%) rotateY(20deg);}
+        50% { transform: scaleX(-1) translateY(3%) rotateY(-15deg); }
+        100% { transform: scaleX(-1) translateY(-3%) rotateY(20deg); }
+    }
+}
+
