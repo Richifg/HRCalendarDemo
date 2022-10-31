@@ -20,4 +20,4 @@ You can run the app locally by executing the following commands:
 
 ## Demo
 
-Live demo available here: TODO
+Live demo available [here](hr-calendar-demo.vercel.app)
